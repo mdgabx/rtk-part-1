@@ -4,8 +4,8 @@ import axios from 'axios'
 // generate pending fulfilled and rejected action types
 
 export const fetchUsers = createAsyncThunk('user/fetchUsers', async () => {
-    return ( await axios.get('https://jsonplaceholder.typicode.com/users/')
-            .then((res) => res.data.map((user) => user)))
+    return (await axios.get('https://jsonplaceholder.typicode.com/users/')
+            .then((res) => res.data))
 })
 
 const userSlice = createSlice({
@@ -34,5 +34,5 @@ const userSlice = createSlice({
 })
 
 
-export const userActions = userSlice.actions
-export const userReducer = userSlice.reducer
+// export const userActions = userSlice.actions
+export default userSlice.reducer

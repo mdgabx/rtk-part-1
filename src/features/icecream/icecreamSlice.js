@@ -4,7 +4,7 @@ import { cakeActions } from "../cake/cakeSlice"
 const icecreamSlice = createSlice({
     name: 'icecream',
     initialState: {
-        numOfIcecreams: 10
+        numOfIcecreams: 30
     },
     reducers: {
         ordered: (state) => {
@@ -28,4 +28,4 @@ const icecreamSlice = createSlice({
 
 
 export const icecreamActions = icecreamSlice.actions
-export const icecreamReducer = icecreamSlice.reducer
+export default icecreamSlice.reducer
